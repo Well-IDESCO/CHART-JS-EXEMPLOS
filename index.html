@@ -1,0 +1,66 @@
+<div>
+    <canvas id="grafico"></canvas>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <script>
+    const ctx = document.getElementById('grafico');
+  
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['B1', 'B2', 'B3', 'B4'],
+        datasets: [{
+          label: 'NOTAS - DS',
+          data: [9, 9, 10, 9],
+          borderWidth: 3,
+          borderColor: 'rgba(0,255,0,0.6)',
+          backgroundColor: 'transparent'
+        },
+        {
+          label: 'NOTAS - MULT',
+          data: [9, 10, 9, 8],
+          borderWidth: 3,
+          borderColor: 'rgba(200,0,255,0.6)',
+          backgroundColor: 'transparent'
+        },
+        {
+          label: 'NOTAS - CTB',
+          data: [8, 9, 8, 10],
+          borderWidth: 3,
+          borderColor: 'rgba(165,42,42,0.6)',
+          backgroundColor: 'transparent'
+        },
+        {
+          label: 'NOTAS - REDES',
+          data: [8, 10, 7, 7],
+          borderWidth: 3,
+          borderColor: 'rgba(0,0,255,0.6)',
+          backgroundColor: 'transparent'
+        }
+    ]
+      },
+      options: {
+        
+    //     animations: {
+    //         tension: {
+    //             duration: 1000,
+    //             easing: 'linear',
+    //             from: .1,
+    //             to: 0,
+    //             loop: true
+    //     }
+    // },
+        plugins: {
+            title:{
+            display: true,
+            text: 'MÉDIAS 2023 POR TURMA',
+            padding: {
+                    top: 10,
+                }
+        },
+        }
+      }
+    });
+  </script>
